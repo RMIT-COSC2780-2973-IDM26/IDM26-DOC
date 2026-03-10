@@ -31,10 +31,11 @@ These are common questions and issues on Git and GitHub.
 We will use proper (git) version control in all our programming projects. This is totally standard practice in the industry and you would have seen that in previous courses (SEF and SEPT at least). Said so, if you want to refresh or have a quick intro to it, here are two resources I found useful:
 
 - [Learning Git and GitHub](https://www.linkedin.com/learning/learning-git-and-github-14213624/): An excellent course on on LinkedIn Learning Links introducing Git & Github.
+- [What is Git? Our beginner’s guide to version control](https://github.blog/developer-skills/programming-languages-and-frameworks/what-is-git-our-beginners-guide-to-version-control/) @ GitHub
 - [Git Tutorial for Beginners: Command-Line Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4).
 - [30' video on Git & GitHub](https://youtu.be/jG4Vs81kMlc).
 - [GitHub Guides](https://guides.github.com/).
-- [Git \& GitHub Tutorial & Reference @ Javatpoint](https://www.javatpoint.com/git).
+- [Basic GIT commands](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) @ GitHub
 
 There are lots more good resources on the web of course!
 
