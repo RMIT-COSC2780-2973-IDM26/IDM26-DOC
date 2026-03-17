@@ -24,6 +24,7 @@
     - [I get warning on "Test succeeded with choicepoint", why?](#i-get-warning-on-test-succeeded-with-choicepoint-why)
   - [Issues 😕](#issues-)
     - [Why do I get  "`Warning: Clauses of a/1 are not together in the source-file`" warning?](#why-do-i-get--warning-clauses-of-a1-are-not-together-in-the-source-file-warning)
+    - [I cannot see the whole answer, it is cut and completed with `...`; how can I see it all?](#i-cannot-see-the-whole-answer-it-is-cut-and-completed-with--how-can-i-see-it-all)
 
 ## General Prolog Information ℹ️
 
@@ -66,7 +67,7 @@ To get more marks and more robust code, we strongly suggest to **avoid singleton
 calculate(X, Y, Z) :- Z is X + 2.
 ```
 
-Here `Y` is a singleton variable, and should be prefixed by an underscore `_Y` or replaced by an anonymous variable `_`.
+Here `Y` is a singleton variable, and should be prefixed by an underscore `_Y` or, better, replaced by an anonymous variable `_`.
 
 Singleton variables make it harder to read the code and can signal a bug, like in the following example:
 
@@ -78,14 +79,15 @@ Here, both `FirstNr`and `Firstnr` will be reported as singleton variables! This 
 
 SWI-Prolog will point out any singleton variables you have:
 
-```shell
-Warning: flight_system.pl:181:
-Warning:    Singleton variables: [Y]
+```prolog
+Warning: /home/ssardina/tmp/test.pl:1:
+Warning:    Singleton variables: [FirstNr,Firstnr]
 ```
 
 Take those warnings seriously as soon as they come up, do not just ignore them: check if it signals a bug and resole the issue so the warning is gone.
 
-**NOTE:** one can change tell SWI-Prolog to _not_ check for singletons via [style_check/1](https://www.swi-prolog.org/pldoc/doc_for?object=style_check/1). However this is NOT recommended for the reasons stated above and should NOT be done in your project assignments unless given explicit written permission from teaching staff.
+> [!NOTE]
+> One can change tell SWI-Prolog to _not_ check for singletons via [style_check/1](https://www.swi-prolog.org/pldoc/doc_for?object=style_check/1). However this is NOT recommended for the reasons stated above and should NOT be done in your project assignments unless given explicit written permission from teaching staff.
 
 ### Use of `;/2`
 
@@ -634,4 +636,67 @@ A very comprehensive explanation, discussion, and ways to address it can be read
 SWI-Prolog will, by default, assume that all clauses of a predicates are all together, without other predicate definitions in the middle. This makes the code more readable as everything for a predicate is "there".
 
 If you want to disable the warning for a particular predicate, use [:- discontiguous/1](https://www.swi-prolog.org/pldoc/man?predicate=discontiguous/1) directive.
+
+### I cannot see the whole answer, it is cut and completed with `...`; how can I see it all?
+
+To avoid dumping the whole screen, SWIPL will be default print compound terms up to some depth, and then use `...` meaning that "there is more".
+
+There are two ways you can set SWIPL to print terms in whole.
+
+Modify flag [`answer_write_options`](https://www.swi-prolog.org/pldoc/man?section=flags#flag:user_flags) to set the max depth of answers to 0, thus disabling the trimming of answers:
+
+```prolog
+set_prolog_flag(answer_write_options,[ quoted(true),portray(true),max_depth(0),spacing(next_argument)]).
+```
+
+Another way is directly via the interactive top level console, by pressing `w`when the answer is giving. This sets SWIPL to write the _whole_ answer. See `[write]` when the first answer was given, and how, after pressing `w`, answers are printed in full from now on.
+
+```prolog
+$ swipl agtcity.pl
+Welcome to SWI-Prolog (threaded, 64 bits, version 9.0.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- percepts_sensed(A, B, C).
+A = entityA13,
+B = 39,
+C = [item(item2, 7, roles([]), parts([])), maxLat(48.9), item(item0, 7, roles([]), parts([])), upgrade(battery, 300, 5), simStart, upgrade(speed, 1000, 1), wellType(wellType0, 1082, 8, 42, 85), item(item4, 6, roles(...), parts(...)), wellType(..., ..., ..., ..., ...)|...] [write]  <===== PRESSED w
+A = entityA13,
+B = 39,
+C = [item(item2, 7, roles([]), parts([])), maxLat(48.9), item(item0, 7, roles([]), parts([])), upgrade(battery, 300, 5), simStart, upgrade(speed, 1000, 1), wellType(wellType0, 1082, 8, 42, 85), item(item4, 6, roles([car, motorcycle]), parts([item1, item3, item2, item0])), wellType(wellType1, 1546, 12, 40, 80), item(item6, 8, roles([motorcycle, truck]), parts([item1, item3, item2, item4, item0, item5])), team('$VAR'('_A')), id(2018-'$VAR'('_')), minLon(2.26), wellType(wellType2, 2112, 17, 36, 72), upgrade(load, 200, 10), item(item5, 8, roles([car, drone]), parts([item1, item3, item2, item0])), name(agentA13), centerLat(48.8424), proximity(5), minLat(48.82), map(paris), centerLon(2.3209), item(item3, 5, roles([]), parts([])), item(item8, 8, roles([motorcycle, truck]), parts([item7, item5])), role(car, 3, 5, 50, 150, 8, 12, 400, 800, 40, 80), item(item1, 10, roles([]), parts([])), steps(1000), upgrade(skill, 1000, 1), item(item7, 8, roles([car, drone]), parts([item4, item0, item5])), maxLon(2.41), cellSize(200.0), upgrade(vision, 1000, 50), seedCapital(50000), skill(8), lastAction(continue), dump(dump6, 48.86252, 2.4065), route([wp(0, 48.83921, 2.33849), wp(1, 48.83994, 2.33599), wp(2, 48.84075, 2.33355), wp(3, 48.84155, 2.33111), wp(4, 48.84181, 2.32891), wp(5, 48.84145, 2.32623), wp(6, 48.8417, 2.32369), wp(7, 48.84175, 2.32294)]), speed(3), workshop(workshop4, 48.87673, 2.40829), chargingStation(chargingStation0, 48.83319, 2.3167, 34), dump(dump3, 48.89629, 2.27694), job(job4, storage2, 8494, 39, 102, [required(item4, 1), required(item5, 1), required(item6, 1), required(item7, 1)]), chargingStation(chargingStation1, 48.8507, 2.37546, 38), workshop(workshop2, 48.85688, 2.37449), job(job1, storage1, 2457, 31, 117, [required(item4, 1), required(item5, 1)]), lastActionResult(successful), workshop(workshop0, 48.841, 2.27717), requestAction, chargingStation(chargingStation5, 48.86011, 2.36664, 29), timestamp(1622289157685), actionID(39), dump(dump0, 48.85725, 2.26261), shop(shop4, 48.87061, 2.28597, 2, [item(item0, 88, 11), item(item1, 43, 16), item(item2, 115, 13), item(item3, 41, 15)]), maxBattery(40), shop(shop1, 48.84175, 2.32294, 2, [item(item0, 100, 17), item(item1, 33, 19), item(item2, 133, 15), item(item3, 42, 16)]), entity(agentA13, '$VAR'('_A'), 48.8386, 2.34106, car), storage(storage0, 48.85903, 2.31793, 14015, 0, []), job(job0, storage3, 20944, 1, 51, [required(item4, 1), required(item5, 2), required(item6, 1), required(item7, 1), required(item8, 3)]), dump(dump1, 48.85156, 2.30028), storage(storage1, 48.82177, 2.34427, 8174, 0, []), storage(storage2, 48.82344, 2.39119, 14259, 0, []), lastActionParams([]), charge(1), massium(50000), maxLoad(50), chargingStation(chargingStation6, 48.87563, 2.40269, 31), chargingStation(chargingStation4, 48.89822, 2.31175, 37), score(0), shop(shop5, 48.86808, 2.30864, 5, [item(item0, 105, 20), item(item2, 101, 12), item(item3, 44, 15)]), workshop(workshop1, 48.85031, 2.33721), step(39), chargingStation(chargingStation3, 48.88746, 2.27299, 27), lon(2.34106), storage(storage3, 48.8721, 2.36737, 14854, 0, []), facility, storage(storage4, 48.87499, 2.38449, 9153, 0, []), deadline(1622289161685), job(job3, storage4, 15702, 35, 128, [required(item5, 1), required(item6, 2), required(item8, 2)]), dump(dump5, 48.87818, 2.37221), shop(shop3, 48.84284, 2.39737, 1, [item(item0, 104, 6), item(item1, 36, 13), item(item2, 117, 6), item(item3, 44, 12)]), resourceNode(node5, 48.83724, 2.33677, item1), shop(shop2, 48.84608, 2.34014, 3, [item(item0, 93, 13), item(item1, 38, 15), item(item2, 136, 16), item(item3, 42, 13)]), chargingStation(chargingStation2, 48.83815, 2.38182, 28), dump(dump2, 48.85437, 2.36587), vision(400), workshop(workshop3, 48.89643, 2.37737), lat(48.8386), routeLength(8), shop(shop0, 48.84222, 2.26791, 3, [item(item0, 82, 9), item(item1, 42, 17), item(item2, 114, 13), item(item3, 37, 14)]), dump(dump4, 48.88689, 2.31385), load(0), job(job2, storage2, 9315, 32, 105, [required(item4, 3), required(item5, 2), required(item6, 1)])] ;
+A = entityA14,
+B = 39,
+```
+
+You can press `?` to find out all the actions that can be done in the interactive SWIPL shell, including setting the write to full and start tracing:
+
+```prolog
+$ swipl agtcity.pl
+Welcome to SWI-Prolog (threaded, 64 bits, version 9.0.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- percepts_sensed(A, B, C).
+A = entityA13,
+B = 39,
+C = [item(item2, 7, roles([]), parts([])), maxLat(48.9), item(item0, 7, roles([]), parts([])), upgrade(battery, 300, 5), simStart, upgrade(speed, 1000, 1), wellType(wellType0, 1082, 8, 42, 85), item(item4, 6, roles(...), parts(...)), wellType(..., ..., ..., ..., ...)|...] 
+  Possible actions:
+  ; (n,r,space,TAB): redo              | t:         trace&redo
+  *:                 show choicepoint  | c (a,RET): stop
+  w:                 write             | p:         print
+  b:                 break             | h (?):     help
+
+Action? 
+```
+
+> [!TIP]
+> When the predicate has just one answer, the `w` key option does not work because no action can be given: SWIPL just succeeds once and done! What you can do to be able to give the `w` action is to query for `Goal ; true`. This will leave a choice point after `Goal`, where you can then issue the action!
+
+
 
