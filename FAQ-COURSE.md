@@ -31,6 +31,12 @@ As any FAQ page, this page is always "under construction”. As we realize that 
 - [DISCUSSION FORUM \& FORUM ETIQUETTE](#discussion-forum--forum-etiquette)
   - [What is the Forum FAQ \& Forum Etiquette?](#what-is-the-forum-faq--forum-etiquette)
   - [Why do you use many platforms (EdStem, Canvas, GitHub, email, GH Classroom, Google, etc.) instead of just Canvas as other courses?](#why-do-you-use-many-platforms-edstem-canvas-github-email-gh-classroom-google-etc-instead-of-just-canvas-as-other-courses)
+  - [I am not registered in the forum, what should I do?](#i-am-not-registered-in-the-forum-what-should-i-do)
+  - [OK I am in, what are the general guidelines in short?](#ok-i-am-in-what-are-the-general-guidelines-in-short)
+  - [How should we use the Discussion Forum?](#how-should-we-use-the-discussion-forum)
+  - [Posting about assessments](#posting-about-assessments)
+  - [My post has been declined, what does it mean?](#my-post-has-been-declined-what-does-it-mean)
+  - [Why do I get all posts by email? I would rather just check the forum myself instead of getting all those emails!](#why-do-i-get-all-posts-by-email-i-would-rather-just-check-the-forum-myself-instead-of-getting-all-those-emails)
 - [WORKSHOP](#workshop)
   - [Are attendance to the workshop mandatory?](#are-attendance-to-the-workshop-mandatory)
   - [But I cannot book my sessions, it says it is full; should I do?](#but-i-cannot-book-my-sessions-it-says-it-is-full-should-i-do)
@@ -285,6 +291,74 @@ Note that **sometimes a student may not _directly_ understand** in which sense a
 Finally, I note that this is **MY approach/view/perspective to Computer Science and Education** at uni level, this part of my "teaching style".  I accept others have a different view and see more benefits in prioritizing uniformity above everything else.
 
 I hope this shed some light on the issue, and of course if a student has a better way/tool to do something within the course, **I am always open to constructive suggestions** and I will, without hesitation, adopt them if they are provably better and accessible.
+
+## I am not registered in the forum, what should I do?
+
+At the start of the course, I will send an invitation to all enrolled students in the course to join the course forum. If you receive that email 📧 and you are enrolled, please accept the invitation. You may want to check your spam folder, sometimes you can get surprises! 😉
+
+If you still cannot find the invite, please email me and we will sort it out. 👌
+
+Please remember to enrol only with your RMIT student account, not with your private account. Private accounts will be removed from the forum.
+
+## OK I am in, what are the general guidelines in short?
+
+First, students are expected to read the posts from staff at least once a day. Important announcements will be pined and marked to be also sent by email, but this will only work if you have your notificaitons in EdStem enabled!
+
+Here are some guidelines you should follow:
+
+- **Configure** your EdStem's notification settings. By default, EdStem emails you when there are new topics and posts. This can get overwhelming when the class is busy. Fortunately, EdStem allows you to configure how frequently you get emails:
+   - Click on the gear icon at the top right corner of the screen
+   - Choose “Account/Email Settings”
+   - Scroll to “Class & Email Settings”
+   - Click “Edit Email notifications”
+   - “Smart Digest” is a good choice for most people.
+
+  💡 It is wise to leave the “For updates to Questions or Notes you follow” to “Real Time” unless you check EdStem more frequently than you check your email.
+- Search before you post.
+- Heart questions and answers you find useful.
+- Answer questions you feel confident answering.
+- Mark as Resolved questions you have asked and that have been successfully answered.
+- Make sure you read all posts under the "Reading List" or "Announcement" tags. These are mandatory posts to read.
+- Read and understand the [FAQ Forum Etiquette](https://docs.google.com/document/d/1HdrY91LIPRZOEni_jsCwmN8Oc8MrUzljen6qHzbtQeU/edit#heading=h.9txqszvrzybd).
+- Share interesting course related content with staff and peers.
+- For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://edstem.org/quickstart/ed-discussion.pdf).
+
+
+## How should we use the Discussion Forum?
+
+In general, the forum is a place to enquire about _specific_ issues you may be struggling on, clarifications, or things that you are curious about. The forum can also be used to share interesting things related to the course that you think other students may like. 
+
+In general, your posts should have a clear and precise question and not be too long. If your post is just an open question or something not related to the course, then it probably should not be a post at all. The forum should not be used to post (your) solutions or processes, or to ask for them.
+
+When you reply, do not ever paste your solution. You can give some hints, or show a particular fragment of your approach to highlight the strategy (e.g., one rule of your grammar), or point to some part of the book, slide, or some web page that may shed some light, but do NOT just throw your complete solution to the forum. As much as you want to help your fellow students, doing so is counter-productive.
+
+Thanks!
+
+## Posting about assessments
+
+Do not ever post any information on the forum that may disclose how to solve a question or what the solution may be, regardless of whether it is correct or not. The post is not the place to make public what you are doing or how you are thinking. Those posts may disclose the solution or confuse other students in the wrong direction, and they may constitute a case of cheating.
+
+You can, however, ask for clarifications on what is being asked, for example, whether a formal proof is required in a given exercise or to clarify certain notation. Any post discussing possible solutions or strategies may directly be considered a case of plagiarism, see above. If in doubt, do not post and ask the instructor or post a private post (if the teaching staff consider it safe, they will make it open).
+
+## My post has been declined, what does it mean?
+
+Instructors can decline threads to maintain the quality of discussion and to remove low-effort questions. Declined threads are not visible to other students: the thread becomes private and locked.
+
+When a post has been declined, it often means is not appropriate.  Instructors may optionally leave a message explaining why the thread was declined and suggest changes that should be made to improve the thread. Reflect what was the problem and re-post if necessary.
+
+## Why do I get all posts by email? I would rather just check the forum myself instead of getting all those emails!
+
+By default, EdStem emails you when there are new topics and posts. This can get overwhelming when the class is busy. Fortunately, EdStem allows you to configure how frequently you get emails:
+
+- Click on the gear icon at the top right corner of the screen
+- Choose “Account/Email Settings”
+- Scroll to “Class & Email Settings”
+- Click “Edit Email notifications”
+- “Smart Digest” is a good choice for most people.
+- It is wise to leave the “For updates to Questions or Notes you follow” to “Real Time” unless you check EdStem more frequently than you check your email.
+- Answer borrowed from here
+-  
+
 
 # WORKSHOP
 

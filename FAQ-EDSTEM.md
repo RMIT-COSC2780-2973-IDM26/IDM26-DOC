@@ -21,11 +21,9 @@ We can start naming all the many things that EdStem does much better (nicer and 
 
 Please see dedicated [Forum FAQ & Etiquette][FORUM-FAQ] and in particular [how to post][FORUM-POSTING] with class. 😄
 
-
 ## Is there a short guide/description for EdStem?
 
 Yes, refer to the [Quick Start Guide](https://edstem.org/quickstart/ed-discussion.pdf).
-
 
 ## EdStem can do Latex! How?
 
