@@ -7,17 +7,17 @@ Overall, you want to generate a meaningful git history that provides quality evi
 These include:
 
 1. _Configure your git authorship_: set your name and email address correctly so that your commits have correct authorship information. Please access the commit history in your remote repo, and check your commits are linked to the GH username you register in GitHub classroom.
-   * Your username in each commit should be the SAME you have linked to your student number in GitHub Classroom in the first cloning, which is the suffix of each repo you clone. For example, if your repo is `https://github.com/RMIT-COSC1127-3117-AI25/p0-warmup-ssardina`, then all your commits should be done by GH user `ssardina`.
-   * Your username in each commit should be "clickable"; if you cannot click on the user of a commit, then that user is wrongly configured and you must fix it to be clickable.
-   * Read about this issues and how to correct them if wrong [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/troubleshooting-commits/why-are-my-commits-linked-to-the-wrong-user).
+   - Your username in each commit should be the SAME you have linked to your student number in GitHub Classroom in the first cloning, which is the suffix of each repo you clone. For example, if your repo is `https://github.com/RMIT-COSC1127-3117-AI25/p0-warmup-ssardina`, then all your commits should be done by GH user `ssardina`.
+   - Your username in each commit should be "clickable"; if you cannot click on the user of a commit, then that user is wrongly configured and you must fix it to be clickable.
+   - Read about this issues and how to correct them if wrong [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/troubleshooting-commits/why-are-my-commits-linked-to-the-wrong-user).
 
 1. _Commit early, commit often (but meaningfully!):_ single or few commits with all the solution or big chunks of it is not good practice.
 1. _Use atomic logically-separate commits:_ avoid commits about many things or dummy commits; each commit should be about one interesting thing. You want to create a meaningful git history, that allows you to easily revert a past change and show your work towards the final submission. For that, you also don't want to flood your git history with tons of padding un-interesting commits.
-   * In general, commit whenever you add a new feature that is worth recording, such as adding a new function, fixing a typo, fixing indentation, optimising a loop, refactoring a section of your code, having a first but not complete approach to your solution, etc. Do not wait to get the complete perfect solution to commit, as soon as the commits are relevant towards your final solution for a task. Do not mix different things in the same commit.
-   * Also think about what would happen if my machine breaks down. Will you be regret you haven't commit your latest work? It is not that bad losing 15' work, but it will be losing hours of work. This does not mean committing on a time basis, but doing lots of work without recording it is often bad practice.
+   - In general, commit whenever you add a new feature that is worth recording, such as adding a new function, fixing a typo, fixing indentation, optimising a loop, refactoring a section of your code, having a first but not complete approach to your solution, etc. Do not wait to get the complete perfect solution to commit, as soon as the commits are relevant towards your final solution for a task. Do not mix different things in the same commit.
+   - Also think about what would happen if my machine breaks down. Will you be regret you haven't commit your latest work? It is not that bad losing 15' work, but it will be losing hours of work. This does not mean committing on a time basis, but doing lots of work without recording it is often bad practice.
 1. _Use meaningful commit messages:_ as comments in your code, a commit message should clearly and succinctly summarise what the commit is about. Messages like "fix", "work", "commit", "changes", "solved", or "search.py" are poor and do not help us understand what was done. Commits with messages like "Q1" , "question q1", or "q1 completed/done" are not good unless the work on the question is trivial. Check the nice posts [“Good Commit” vs “Your Commit”: How to Write a Perfect Git Commit Message](https://www.linkedin.com/pulse/good-commit-vs-your-how-write-perfect-git-victor-timi/) and [Git Best Practices – How to Write Meaningful Commits, Effective Pull Requests, and Code Reviews](https://www.freecodecamp.org/news/git-best-practices-commits-and-code-reviews/).
 1. _Always push your commits to remote_: when you commit you are only changing your local copy in your machine. Only when you push your commits are recorded in your remote repo in GitHub. Never pushing a tag without pushing all the commits leading to the corresponding commits; otherwise your remote ends up with a tag not associated with any development branch:
-  
+
     ![](imgs/tag-no-commits.png)
 
 1. _Never upload files:_ git should not be used as a storage service. Setup your system to do proper meaningful commits and do not use GitHub's upload button ever.
@@ -29,18 +29,18 @@ Besides proper commit behavior to obtain a clean and meaning history, you should
 1. _Use the Issue Tracker:_ use issues to keep track of tasks, enhancements, and bugs for your projects. They are also a great way to collaborate in a team, by assigning issues and discussing on them directly. Check GitHub [Mastering Issues Guide](https://guides.github.com/features/issues/).
 1. _Follow good workflow and use branches:_ use the standard branch-based development workflow; it will make your team much more productive and robust! Check GitHub [Workflow Guide](https://guides.github.com/introduction/flow/). When merging or re-basing, squash commits _only_ when it will yield a better quality set of commits in the main branch; in general you should avoid squashing (e.g., do not squash commits that are by themselves meaningful).
 
-
 ## Team-based projects
 
 In addition, if **working in groups for a team-based project:**
 
 1. _Commit evenly across team members_ (for team project/assignment components). This means there should be meaningful commits from _all_ participating members. Note that [peer programming](https://en.wikipedia.org/wiki/Pair_programming), which we encourage and expect, does _not_ mean one member always or mostly acts as the "driver" and commits. Instead, *all* members should take turns, be the "driver" and commit to the repo.
-   - If you are doing peer programming, make sure to _commit with the co-author facility_ (see next point) so that all members of the team get credit for the work. 
+   - If you are doing peer programming, make sure to _commit with the co-author facility_ (see next point) so that all members of the team get credit for the work.
    - If you are doing peer programming and only one member is the main committer, then that is not good practice and it will be considered that only that member is contributing to the project, which can have a significant impact in the final mark of the project.
    - We will not accept excuses/reasons like _"I was doing peer programming but I forgot to commit"_ or _"I was doing peer programming but I forgot to use the co-author facility"_ or _"My laptop or configuration is not working so we always commit in another member system"_, etc. You must have your set-up correctly configure from day zero, and you must be able to commit and use the co-author facility if doing peer programming. If you have issues with your set-up, you should fix them as soon as possible and not wait until the last minute.
-2. When peer-programming, you must make use of the [co-author facility](https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) in GitHub to be accounted in the contributions. See [this post](https://gitbetter.substack.com/p/how-to-add-multiple-authors-to-a) and [this post](https://github.blog/2018-01-29-commit-together-with-co-authors/) as well about co-authors commits. 
+2. When peer-programming, you must make use of the [co-author facility](https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) in GitHub to be accounted in the contributions. See [this post](https://gitbetter.substack.com/p/how-to-add-multiple-authors-to-a) and [this post](https://github.blog/2018-01-29-commit-together-with-co-authors/) as well about co-authors commits.
    - You can conveniently include multiple co-authors to a commit via GitHub Desktop or via VScode (or otherwise by writing special commit messages) as explained in the links given.
    - Use VSCode extensions like or [Git Mob](https://marketplace.visualstudio.com/items?itemName=RichardKotze.git-mob) or [GitHub Co-Author](https://github.com/rjimenezda/vscode-coauthor) to easily add co-authors to your commits.
+   - Use VSCode [Live Share]() to do peer programming remotely and commit together with co-authors in real time.
 3. _Communicate in the GitHub (Discussions, Issues, Pull Requests, and Projects):_ in team projects, members are expected to communicate and coordinate in an adequate, professional, and efficient manner. In GitHub, teams can use Discussions, Issues and Pull Requests, and Projects within the repo of the project. Video and voice chats outside of GitHub are permissible (e.g., to arrange meetings or support peer programming), but communication and coordination should not be limited to that and they will not be use as evidence of team-work and contributions.
 4. Use branches and pull requests to manage your development and collaboration.
 
@@ -53,7 +53,7 @@ So, you may ask **_what is the average commits the assignment is expected to hav
 
 Here are some examples of high-quality Git history and management:
 
- <p align="center"> 
+ <p align="center">
     <img src="imgs/great-git_repo_commits-01-IDM.png">
     <img src="imgs/great-git_repo_commits-02-IDM.png">
     <img src="imgs/great-git_repo_commits-03-IDM.png">
