@@ -26,7 +26,10 @@ If in doubt always ask in the forum. Some other predicates that you shall not us
 
 Some predicates that you can use as they are still basic are:
 
-- `nth0/3`, `nth1/3`
+- `nth0/3`, `nth1/3`, `reverse/2`, `min/2`, `max/2`, `last/2`.
+- All the type checking predicates: https://www.swi-prolog.org/pldoc/man?section=typetest
+- Any of the standard order of terms (e.g., `@</2`): https://www.swi-prolog.org/pldoc/man?section=standardorder
+
 
 ## How can I compute & carry "so-far" results?
 
