@@ -10,7 +10,10 @@
 
 ## Updates to the spec
 
-None so far...
+- See [this post](https://edstem.org/au/courses/29085/discussion/3217233) for:
+  - Fix price and duration values in the example of Exercise 4.
+  - Clarify query 3 what "just" means.
+  - Add a note about redundant answers and ordering of answers in queries.
 
 ## Should the output/results of queries be listed in the order as in the spec?
 
