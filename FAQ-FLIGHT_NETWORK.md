@@ -2,6 +2,7 @@
 
 - [Flight Network Assignment FAQ](#flight-network-assignment-faq)
   - [Updates to the spec](#updates-to-the-spec)
+  - [For exercise 4, should the source template says `find_path/4`, not `trip/4`, which one should I implement?](#for-exercise-4-should-the-source-template-says-find_path4-not-trip4-which-one-should-i-implement)
   - [Should the output/results of queries be listed in the order as in the spec?](#should-the-outputresults-of-queries-be-listed-in-the-order-as-in-the-spec)
   - [Can I use built-in predicate `P/n`?](#can-i-use-built-in-predicate-pn)
   - [How can I compute \& carry "so-far" results?](#how-can-i-compute--carry-so-far-results)
@@ -14,6 +15,10 @@
   - Fix price and duration values in the example of Exercise 4.
   - Clarify query 3 what "just" means.
   - Add a note about redundant answers and ordering of answers in queries.
+
+## For exercise 4, should the source template says `find_path/4`, not `trip/4`, which one should I implement?
+
+The template in the spec is correct, you should implement `trip/4` as specified. The name `find_path/4` was an old name for the predicate, but we changed it to `trip/4` to be more descriptive and consistent with the rest of the predicates in the exercise.
 
 ## Should the output/results of queries be listed in the order as in the spec?
 
