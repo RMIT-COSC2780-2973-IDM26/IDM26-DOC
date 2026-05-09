@@ -1,5 +1,22 @@
 # Examination Timetabling Allocation Project - FAQ
 
+- [Examination Timetabling Allocation Project - FAQ](#examination-timetabling-allocation-project---faq)
+  - [General](#general)
+  - [Respect time-limit!](#respect-time-limit)
+  - [Impossible exams!](#impossible-exams)
+  - [Respect Clingo constants given!](#respect-clingo-constants-given)
+  - [Optional data and default values](#optional-data-and-default-values)
+  - [Need a particular Python package beyond standard ones?](#need-a-particular-python-package-beyond-standard-ones)
+  - [Validator 🤞](#validator-)
+  - [What if the output folder does not exist?](#what-if-the-output-folder-does-not-exist)
+  - [Can my application output more than the calendar?](#can-my-application-output-more-than-the-calendar)
+  - [Can I change identifiers of exams, rooms, timeslots to lowercase?](#can-i-change-identifiers-of-exams-rooms-timeslots-to-lowercase)
+  - [Clarifications on constraints](#clarifications-on-constraints)
+    - [What are F1 and F2?](#what-are-f1-and-f2)
+    - [Timeslot coincidence](#timeslot-coincidence)
+    - [Enforced timeslots and rooms](#enforced-timeslots-and-rooms)
+    - [Combinable Rooms](#combinable-rooms)
+
 ## General
 
 - Input format may have redundancies, e.g., size of an exam. it is NOT a bug, it is a natural feature of real datasets. Dealing well with this is part of understanding and modeling!
@@ -36,13 +53,16 @@ Default values should be used on optional data that may not show up in the YAML 
 
 If you use a particular Python project that is not standard, come to us beforehand so we can agree and we can install it in our testing servers. Otherwise your application will crash right away when importing packages.
 
-## Validator  🤞
+## Validator 🤞
 
 A separate post was done in [#71](https://edstem.org/au/courses/29085/discussion/3307388) about this.
 
 You can use our validator. Note that there is an initial template code provided under `validator/` in the source code. But this is ONLY if you want to aim for HD level in the end after you have completed Levels 1-3.
 
 Do not work on the validator until you have met all other requirements!
+
+>[!Caution]
+> When using the validator, make sure you tell it if you have downcased the identifiers, via option `--downcase`. Check [this question](#can-i-change-identifiers-of-exams-rooms-timeslots-to-lowercase) below.
 
 ## What if the output folder does not exist?
 
@@ -78,15 +98,15 @@ If you downcase the identifiers, you should tell so to the validator via option 
 
 In the papers listed in the spec. 👁️
 
-## Timeslot coincidence
+### Timeslot coincidence
 
 Timeslot coincidence constraint apply _only_ if the pair exams involved do not clash, i.e., if they have no common students. If they do clash, then a timeslot coincidence constraint between the two exams should be ignored and the exams can be allocated to different time slots.
 
-## Enforced timeslots and rooms
+### Enforced timeslots and rooms
 
 Enforced constraints, for timeslots and rooms,  allow a set of possible options: any of the options is OK.
 
-## Combinable Rooms
+### Combinable Rooms
 
 It is NOT mandatory to combine rooms in a combinable set, but if you do combine them, you must combine all of the rooms in the set (i.e., you cannot combine just a subset of the rooms in the combinable set).
 
