@@ -16,6 +16,7 @@
     - [Timeslot coincidence](#timeslot-coincidence)
     - [Enforced timeslots and rooms](#enforced-timeslots-and-rooms)
     - [Combinable Rooms](#combinable-rooms)
+    - [Global capacity: no. of students or exams?](#global-capacity-no-of-students-or-exams)
 
 ## General
 
@@ -100,7 +101,9 @@ In the papers listed in the spec. 👁️
 
 ### Timeslot coincidence
 
-Timeslot coincidence constraint apply _only_ if the pair exams involved do not clash, i.e., if they have no common students. If they do clash, then a timeslot coincidence constraint between the two exams should be ignored and the exams can be allocated to different time slots.
+Timeslot coincidence constraint apply _only_ if the exams involved do not any clash, i.e., if they have no common students. If they do clash, then a timeslot coincidence constraint between should be ignored and the exams can be allocated to different time slots.
+
+Note that when a timeslot coincident constraint includes more than two exams, then it means that "all exams in the set should be allocated to the same timeslot", provided no clash at all exist. 😉 If a clash exist between two of the exams in the constraint, then the whole constraint does not apply. If it is important to have particular subsets being coincident then they need to be listed as another separate constraint.
 
 ### Enforced timeslots and rooms
 
@@ -115,3 +118,15 @@ When rooms are combined, their capacities and costs are summed. 🤝
 Also, if a set of rooms is used as combinable, then the individual rooms cannot be used separately (i.e., they can only be used as part of the combinable set).
 
 When an exam has room enforcing constraints for rooms that can be combined with others, the enforcing constraint is still respected if allocated to the combinable set that includes the enforced room. 👍
+
+### Global capacity: no. of students or exams?
+
+As per the paper, the global capacity of a slot refers to the number of students that the slot can accommodate. In the classical NOTT problem it was 1550 students per slot, but this can be configured via the `global_capacity` constant. 😉
+
+Note the comment in the source was `% limit of no of exams  per timeslot`, but it should be `% limit of no of students per timeslot`. Thanks for pointing it out! 🙌 We will not push the change as it is a comment and may produce conflicts with your current work in the file. 😉 So you should change these two lines (if you want, not really necessary):
+
+```prolog
+#const tmax = #sup.             % max timeslot number that can be used
+#const global_capacity = #sup.  % max number of students per timeslot
+```
+
