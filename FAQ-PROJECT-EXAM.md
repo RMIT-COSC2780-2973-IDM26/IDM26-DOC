@@ -2,19 +2,21 @@
 
 - [Examination Timetabling Allocation Project - FAQ](#examination-timetabling-allocation-project---faq)
   - [General](#general)
-  - [Validator 🤞](#validator-)
-  - [Modeling](#modeling)
+  - [Validator ✅](#validator-)
+    - [What is the `--config` option for?](#what-is-the---config-option-for)
+    - [Why does render service timesout sometimes?](#why-does-render-service-timesout-sometimes)
+  - [Modeling 🖊️](#modeling-️)
     - [Optional data and default values](#optional-data-and-default-values)
     - [Are timeslots ids consecutives?](#are-timeslots-ids-consecutives)
     - [Can I change identifiers of exams, rooms, timeslots to lowercase?](#can-i-change-identifiers-of-exams-rooms-timeslots-to-lowercase)
-  - [Solver Application](#solver-application)
+  - [Solver Application 🚒](#solver-application-)
     - [My Clingo is taking minutes to ground! Why?](#my-clingo-is-taking-minutes-to-ground-why)
     - [What if the output folder does not exist?](#what-if-the-output-folder-does-not-exist)
     - [Can my application output more than the calendar?](#can-my-application-output-more-than-the-calendar)
     - [Respect time-limit!](#respect-time-limit)
     - [Respect Clingo constants given!](#respect-clingo-constants-given)
     - [Need a particular Python package beyond standard ones?](#need-a-particular-python-package-beyond-standard-ones)
-  - [Clarifications on constraints](#clarifications-on-constraints)
+  - [Clarifications on constraints 👍](#clarifications-on-constraints-)
     - [What are F1 and F2?](#what-are-f1-and-f2)
     - [For cost FC, what is `N`?](#for-cost-fc-what-is-n)
     - [Timeslot coincidence](#timeslot-coincidence)
@@ -28,7 +30,7 @@
 
 - Input format may have redundancies, e.g., size of an exam. it is NOT a bug, it is a natural feature of real datasets. Dealing well with this is part of understanding and modeling!
 
-## Validator 🤞
+## Validator ✅
 
 A separate post was done in [#71](https://edstem.org/au/courses/29085/discussion/3307388) about this.
 
@@ -39,7 +41,43 @@ Do not work on the validator until you have met all other requirements!
 >[!Caution]
 > When using the validator, make sure you tell it if you have downcased the identifiers, via option `--downcase`. Check [this question](#can-i-change-identifiers-of-exams-rooms-timeslots-to-lowercase) below.
 
-## Modeling
+### What is the `--config` option for?
+
+The `--config` option allows you to specify a configuration parameters without having to specify them one by one as separate command line arguments (e.g., `--prox1_cost 1` or  `--tmax 29`). The configuration file is a Prolog facts with facts stating the value of each constant. For example:
+
+```prolog
+config(tmax, 30).
+config(global_capacity, 1500).
+config(timeslot_before, -1).
+config(timeslot_coincident, -1).
+config(timeslot_consecutive, -1).
+config(timeslot_different, -1).
+config(timeslot_earliness, -1).
+config(timeslot_enforced, -1).
+config(timeslot_exclusive, -1).
+config(timeslot_spread, -1).
+config(allocate_rooms, 0).
+config(room_coincident, -1).
+config(room_combinable, -1).
+config(room_different, -1).
+config(room_enforced, -1).
+config(room_exclusive, -1).
+config(room_unavailable, -1).
+config(prox1_cost, 3).
+config(prox2_cost, 1).
+config(prox3_cost, 0).
+config(spread_cost, 0).
+config(frontload_no, 0).
+config(frontload_cost, 10).% 
+```
+
+If your solver application is able to produce such file, you can then use it at validation time! 😉
+
+### Why does render service timesout sometimes?
+
+Because it goes to sleep if not used for a while; so first request may timeout as it needs to boot up the system, but then it should work fine. 🕥
+
+## Modeling 🖊️
 
 ### Optional data and default values
 
@@ -65,7 +103,7 @@ However, if you want to downcase the identifiers, you can do so, but make sure t
 
 If you downcase the identifiers, you should tell so to the validator via option `--downcase`, so that it can correctly interpret the identifiers as atoms.
 
-## Solver Application
+## Solver Application 🚒
 
 ### My Clingo is taking minutes to ground! Why?
 
@@ -151,7 +189,7 @@ So if the system is called with option `-allocate_rooms=-1` then we are asking t
 
 If you use a particular Python project that is not standard, come to us beforehand so we can agree and we can install it in our testing servers. Otherwise your application will crash right away when importing packages.
 
-## Clarifications on constraints
+## Clarifications on constraints 👍
 
 ### What are F1 and F2?
 
