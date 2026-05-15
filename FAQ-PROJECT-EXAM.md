@@ -16,6 +16,7 @@
     - [Respect time-limit!](#respect-time-limit)
     - [Respect Clingo constants given!](#respect-clingo-constants-given)
     - [Need a particular Python package beyond standard ones?](#need-a-particular-python-package-beyond-standard-ones)
+    - [What do the constants in `core.lp` do?](#what-do-the-constants-in-corelp-do)
   - [Clarifications on constraints 👍](#clarifications-on-constraints-)
     - [What are F1 and F2?](#what-are-f1-and-f2)
     - [For cost FC, what is `N`?](#for-cost-fc-what-is-n)
@@ -68,7 +69,7 @@ config(prox2_cost, 1).
 config(prox3_cost, 0).
 config(spread_cost, 0).
 config(frontload_no, 0).
-config(frontload_cost, 10).% 
+config(frontload_cost, 10).%
 ```
 
 If your solver application is able to produce such file, you can then use it at validation time! 😉
@@ -188,6 +189,54 @@ So if the system is called with option `-allocate_rooms=-1` then we are asking t
 ### Need a particular Python package beyond standard ones?
 
 If you use a particular Python project that is not standard, come to us beforehand so we can agree and we can install it in our testing servers. Otherwise your application will crash right away when importing packages.
+
+### What do the constants in `core.lp` do?
+
+The file `core.lp` that you were provided start with the following constant definitions:
+
+```answer-set-programming
+#const tmax = #sup.             % max timeslot number that can be used
+#const global_capacity = #sup.  % max number of students per timeslot
+#const timeslot_before = -1.
+#const timeslot_coincident = -1.
+#const timeslot_consecutive = -1.
+#const timeslot_different = -1.
+#const timeslot_enforced = -1.
+#const timeslot_exclusive = -1.
+
+% flags for room constraints
+#const allocate_rooms = 0.
+#const room_coincident = -1.
+#const room_combinable = -1.
+#const room_different = -1.
+#const room_enforced = -1.
+#const room_exclusive = -1.
+#const room_unavailable = -1.
+
+% proximity
+#const prox1_cost = 0.
+#const prox2_cost = 0.
+#const prox3_cost = 0.
+#const prox_fc = 0.
+
+% ITC07
+#const mixed_durations_cost = 0.
+#const frontload_no = 0.
+#const frontload_last = 30.
+#const frontload_cost = 10.
+#const spread_cost = 0.  % 0 = disable
+#const spread = 5.  % spread window
+```
+
+These constants are used to enable/disable different constraints, and to set the cost of weak constraints. The convention is:
+
+- 0 denotes disabled.
+- -1 demotes enabled.
+- any positive value denotes enable and the cost (for soft constraints).
+
+So, if `timeslot_before` is set to -1, then the timeslot before constraint is enabled, and if it is set to 0, then it is disabled. If `prox1_cost` is set to 3, then F1 cost is enabled and its cost is 3.
+
+The validator will also use analogous options to tell the validator how each constraint is configured.
 
 ## Clarifications on constraints 👍
 
