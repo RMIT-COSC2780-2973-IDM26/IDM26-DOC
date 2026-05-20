@@ -27,6 +27,7 @@
     - [Global capacity: no. of students or exams?](#global-capacity-no-of-students-or-exams)
     - [Impossible exams: what should we do with them?](#impossible-exams-what-should-we-do-with-them)
     - [Timeslot earliness and spread constraints](#timeslot-earliness-and-spread-constraints)
+    - [Can rooms accommodate more than one exam?](#can-rooms-accommodate-more-than-one-exam)
 
 ## General
 
@@ -309,3 +310,14 @@ For example, if exam E of size 300 must be run on room R with capacity 200, then
 ### Timeslot earliness and spread constraints
 
 You should ignore the `timeslot_earliness` and `timeslot_spread` constraints for this project in your solution. Spread and proximity will be covered though other constraints.
+
+### Can rooms accommodate more than one exam?
+
+**Yes!** In many universities, rooms are often very large (sometimes stadiums!) so many exams can be allocated to the same room at the same time.
+
+RMIT used to run examinations in MSAC and Showgrounds, with thousands of students taking different exams, from nursing to engineering, at the same time in the same room. So, it is possible that a room can accommodate more than one exam at the same time, as long as the total number of students in the exams allocated to that room does not exceed its capacity restrictions. 👍
+
+> [!NOTE]
+> This is why the "Mixed Durations" constraint (ITC'07) is not relevant, as one would like to not mix exams of different durations in the same timeslot and room to avoid disruptions during an exam when some students with shorter exams leave the room while others are still writing. 😉
+
+
