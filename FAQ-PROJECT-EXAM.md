@@ -2,6 +2,7 @@
 
 - [Examination Timetabling Allocation Project - FAQ](#examination-timetabling-allocation-project---faq)
   - [General](#general)
+    - [For level 1, what hard constraints should I consider?](#for-level-1-what-hard-constraints-should-i-consider)
   - [Validator ✅](#validator-)
     - [What is the `--config` option for?](#what-is-the---config-option-for)
     - [Why does render service timesout sometimes?](#why-does-render-service-timesout-sometimes)
@@ -18,7 +19,7 @@
     - [Need a particular Python package beyond standard ones?](#need-a-particular-python-package-beyond-standard-ones)
     - [What do the constants in `core.lp` do?](#what-do-the-constants-in-corelp-do)
   - [Clarifications on constraints 👍](#clarifications-on-constraints-)
-    - [What are F1 and F2?](#what-are-f1-and-f2)
+    - [What are F1, F2, F3 and FC?](#what-are-f1-f2-f3-and-fc)
     - [For cost FC, what is `N`?](#for-cost-fc-what-is-n)
     - [Timeslot coincidence](#timeslot-coincidence)
     - [Enforced timeslots and rooms](#enforced-timeslots-and-rooms)
@@ -30,6 +31,24 @@
 ## General
 
 - Input format may have redundancies, e.g., size of an exam. it is NOT a bug, it is a natural feature of real datasets. Dealing well with this is part of understanding and modeling!
+
+### For level 1, what hard constraints should I consider?
+
+Basically, all the ones related to timeslots. These include the obvious no-clashing allocation and respecting timeslot limitations (e.g., timeslot capacity or duration), but also the ones governed by the listed constants as per `EXAM_ALLOCATE.md`:
+
+```answer-set-programming
+#const tmax = #sup.
+#const global_capacity = #sup.
+#const timeslot_before = -1.
+#const timeslot_coincident = -1.
+#const timeslot_consecutive = -1.
+#const timeslot_different = -1.
+#const timeslot_enforced = -1.
+#const timeslot_exclusive = -1.
+```
+
+> [!NOTE]
+> I have further elaborated on the Level 1 in the spec.
 
 ## Validator ✅
 
@@ -240,9 +259,11 @@ The validator will also use analogous options to tell the validator how each con
 
 ## Clarifications on constraints 👍
 
-### What are F1 and F2?
+### What are F1, F2, F3 and FC?
 
-In the papers listed in the spec. 👁️
+F1, F2, and FC are explained in the papers provided in the spec. 👁️
+
+F3 is used for _two-in-a-day_ weak constraint from ITC'07, and its cost is set via constant `prox3_cost`. This is documented in file `EXAM_ALLOCATE.md`.
 
 ### For cost FC, what is `N`?
 
