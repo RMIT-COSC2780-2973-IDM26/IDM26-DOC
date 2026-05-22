@@ -29,6 +29,7 @@
     - [Impossible exams: what should we do with them?](#impossible-exams-what-should-we-do-with-them)
     - [Timeslot earliness and spread constraints](#timeslot-earliness-and-spread-constraints)
     - [Can rooms accommodate more than one exam?](#can-rooms-accommodate-more-than-one-exam)
+  - [What if an exam is enforced on a non-existent room (or timeslot)?](#what-if-an-exam-is-enforced-on-a-non-existent-room-or-timeslot)
 
 ## General
 
@@ -337,3 +338,8 @@ RMIT used to run examinations in MSAC and Showgrounds, with thousands of student
 > This is why the "Mixed Durations" constraint (ITC'07) is not relevant, as one would like to not mix exams of different durations in the same timeslot and room to avoid disruptions during an exam when some students with shorter exams leave the room while others are still writing. 😉
 
 
+## What if an exam is enforced on a non-existent room (or timeslot)?
+
+This is a case of [impossible exam](#impossible-exams-what-should-we-do-with-them) (in this case due to, possibly, a data error provided by the client). 👍
+
+So, the exam should be left unscheduled, as there is no valid allocation for it, even if it was the only exam! That is, it should not be UNSAT, just this exam should be left unscheduled, and the rest of the exams should be allocated as best as possible. 😉
