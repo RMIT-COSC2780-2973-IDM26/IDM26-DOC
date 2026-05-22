@@ -10,6 +10,7 @@
     - [Optional data and default values](#optional-data-and-default-values)
     - [Are timeslots ids consecutives?](#are-timeslots-ids-consecutives)
     - [Can I change identifiers of exams, rooms, timeslots to lowercase?](#can-i-change-identifiers-of-exams-rooms-timeslots-to-lowercase)
+  - [When combining rooms, how do I name the combined room?](#when-combining-rooms-how-do-i-name-the-combined-room)
   - [Solver Application 🚒](#solver-application-)
     - [My Clingo is taking minutes to ground! Why?](#my-clingo-is-taking-minutes-to-ground-why)
     - [What if the output folder does not exist?](#what-if-the-output-folder-does-not-exist)
@@ -123,6 +124,21 @@ However, if you want to downcase the identifiers, you can do so, but make sure t
 - Remember that integer 23 is not the same as atom '23'.
 
 If you downcase the identifiers, you should tell so to the validator via option `--downcase`, so that it can correctly interpret the identifiers as atoms.
+
+## When combining rooms, how do I name the combined room?
+
+Good question, discussed in post [#91](https://edstem.org/au/courses/29085/discussion/3355532)!
+
+Suppose the instance has this information:
+
+```yaml
+  room_combinable:
+    - [POPE-A13, POPE-A14]
+    - [ART-LECTURE, ART-SEMINAR]
+    - [SPORT-LGE1, SPORT-LGE2]
+```
+
+To agree with the validator, we will use `group(N)`, where  `N` is a number that identifies the combinable set of rooms. So, in the example above, if we combine rooms `POPE-A13` and `POPE-A14`, we will name the combined room `group(1)`, and if we combine rooms `ART-LECTURE` and `ART-SEMINAR`, we will name the combined room `group(2)`, and so on.
 
 ## Solver Application 🚒
 
