@@ -3,6 +3,7 @@
 - [Examination Timetabling Allocation Project - FAQ](#examination-timetabling-allocation-project---faq)
   - [General](#general)
     - [For level 1, what hard constraints should I consider?](#for-level-1-what-hard-constraints-should-i-consider)
+    - [Can I get another dataset/problem instance?](#can-i-get-another-datasetproblem-instance)
   - [Validator ✅](#validator-)
     - [What is the `--config` option for?](#what-is-the---config-option-for)
     - [Why does render service timesout sometimes?](#why-does-render-service-timesout-sometimes)
@@ -52,6 +53,19 @@ Basically, all the ones related to timeslots. These include the obvious no-clash
 
 > [!NOTE]
 > I have further elaborated on the Level 1 in the spec.
+
+### Can I get another dataset/problem instance?
+
+The NOTT instance that was given is very rich and has many features. We did not want to overwhelm you with many different instances, but rather give you one rich instance to work on and understand very well, so there are not many "moving parts".
+
+However, many of you have already master it and asked me for extra instances. So, I have added a pack of additional instances coming from past examinations at Melbourne University, and they are available in the [Resource ](https://edstem.org/au/courses/29085/resources) section of the course on Edstem. There are four problem instances, but in reality they are variants of the same semester examination. 
+
+If you do use them, please add them to your repo under `benchmarks/unimel` so we can know you have made use of them 👍
+
+**Enjoy them!!** 😀
+
+> [!WARNING]
+> We are not promoting you use them. You can go very far and even do a perfect project with the single rich instance that we provided you. So, do not feel the need to use them, but if you want to, they are there for you! 😉
 
 ## Validator ✅
 
