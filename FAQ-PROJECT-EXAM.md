@@ -10,7 +10,7 @@
     - [Optional data and default values](#optional-data-and-default-values)
     - [Are timeslots ids consecutives?](#are-timeslots-ids-consecutives)
     - [Can I change identifiers of exams, rooms, timeslots to lowercase?](#can-i-change-identifiers-of-exams-rooms-timeslots-to-lowercase)
-  - [When combining rooms, how do I name the combined room?](#when-combining-rooms-how-do-i-name-the-combined-room)
+    - [When combining rooms, how do I name the combined room?](#when-combining-rooms-how-do-i-name-the-combined-room)
   - [Solver Application 🚒](#solver-application-)
     - [My Clingo is taking minutes to ground! Why?](#my-clingo-is-taking-minutes-to-ground-why)
     - [What if the output folder does not exist?](#what-if-the-output-folder-does-not-exist)
@@ -126,7 +126,7 @@ However, if you want to downcase the identifiers, you can do so, but make sure t
 
 If you downcase the identifiers, you should tell so to the validator via option `--downcase`, so that it can correctly interpret the identifiers as atoms.
 
-## When combining rooms, how do I name the combined room?
+### When combining rooms, how do I name the combined room?
 
 Good question, discussed in post [#91](https://edstem.org/au/courses/29085/discussion/3355532)!
 
