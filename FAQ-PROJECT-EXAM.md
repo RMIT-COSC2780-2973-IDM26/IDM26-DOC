@@ -31,6 +31,7 @@
     - [Timeslot earliness and spread constraints](#timeslot-earliness-and-spread-constraints)
     - [Can rooms accommodate more than one exam?](#can-rooms-accommodate-more-than-one-exam)
     - [What if an exam is enforced on a non-existent room (or timeslot)?](#what-if-an-exam-is-enforced-on-a-non-existent-room-or-timeslot)
+    - [What is the format of timeslot exclusive?](#what-is-the-format-of-timeslot-exclusive)
 
 ## General
 
@@ -357,3 +358,11 @@ RMIT used to run examinations in MSAC and Showgrounds, with thousands of student
 This is a case of [impossible exam](#impossible-exams-what-should-we-do-with-them) (in this case due to, possibly, a data error provided by the client). 👍
 
 So, the exam should be left unscheduled, as there is no valid allocation for it, even if it was the only exam! That is, it should not be UNSAT, just this exam should be left unscheduled, and the rest of the exams should be allocated as best as possible. 😉
+
+### What is the format of timeslot exclusive?
+
+The description of the constraint says:
+
+> set of exams that require their own unique timeslot (e.g., due to shared resources or instructors). No other courses can use the timeslot assigned to such exams.
+
+So, as it is a set of exams that must exclusively share the same timeslot, the format is a list of exams, similar to, for example, timeslot coincidence and room exclusive.
