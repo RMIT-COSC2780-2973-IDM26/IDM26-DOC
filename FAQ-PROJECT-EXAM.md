@@ -314,13 +314,15 @@ Enforced constraints, for timeslots and rooms,  allow a set of possible options:
 
 ### Combinable Rooms
 
-It is NOT mandatory to combine rooms in a combinable set, but if you do combine them, you must combine all of the rooms in the set (i.e., you cannot combine just a subset of the rooms in the combinable set).
+It is NOT mandatory to combine rooms in a combinable set, but if you do combine them, you must combine all of the rooms in the set (i.e., you cannot combine just a subset of the rooms in the combinable set). The solver can also decide to combine some combinable sets and not others.
 
-When rooms are combined, their capacities and costs are summed. 🤝
+When rooms are combined, their capacities and costs are summed. 🤝 :
 
 Also, if a set of rooms is used as combinable, then the individual rooms cannot be used separately (i.e., they can only be used as part of the combinable set).
 
-When an exam has room enforcing constraints for rooms that can be combined with others, the enforcing constraint is still respected if allocated to the combinable set that includes the enforced room. 👍
+When an exam has _room enforcing_ constraints for rooms that can be combined with others, the enforcing constraint is still respected if allocated to the combinable set that includes the enforced room. 👍
+
+Finally, the constat `room_combinable` is used to enable/disable combinable rooms. If the constant is set to 0, then rooms are not allowed to be combined at all.
 
 ### Global capacity: no. of students or exams?
 
