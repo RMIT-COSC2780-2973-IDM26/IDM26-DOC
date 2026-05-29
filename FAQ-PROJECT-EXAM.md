@@ -7,6 +7,7 @@
   - [Validator ✅](#validator-)
     - [What is the `--config` option for?](#what-is-the---config-option-for)
     - [Why does render service timesout sometimes?](#why-does-render-service-timesout-sometimes)
+    - [Validator uses `mix_duration_cost` instead of `mix_durations_cost` as the solver?](#validator-uses-mix_duration_cost-instead-of-mix_durations_cost-as-the-solver)
   - [Modeling 🖊️](#modeling-️)
     - [Optional data and default values](#optional-data-and-default-values)
     - [Are timeslots ids consecutives?](#are-timeslots-ids-consecutives)
@@ -114,6 +115,10 @@ If your solver application is able to produce such file, you can then use it at 
 ### Why does render service timesout sometimes?
 
 Because it goes to sleep if not used for a while; so first request may timeout as it needs to boot up the system, but then it should work fine. 🕥
+
+### Validator uses `mix_duration_cost` instead of `mix_durations_cost` as the solver?
+
+Good catch, this makes the `config.pl` not aligned with the validator. I have released a new validator that uses `mix_durations_cost` as the solver does. Get the new client in EdStem (version 0.0.6`) 👍 Now the server should work with the `config.pl`  using `mixed_durations_cost`!
 
 ## Modeling 🖊️
 
