@@ -118,7 +118,7 @@ Because it goes to sleep if not used for a while; so first request may timeout a
 
 ### Validator uses `mix_duration_cost` instead of `mix_durations_cost` as the solver?
 
-Good catch, this makes the `config.pl` not aligned with the validator. I have released a new validator that uses `mix_durations_cost` as the solver does. Get the new client in EdStem (version 0.0.6`) 👍 Now the server should work with the `config.pl`  using `mixed_durations_cost`!
+Good catch, this makes the `config.pl` not aligned with the validator. I have released a new validator that uses `mix_durations_cost` as the solver does. Get the new client in EdStem (version `0.0.6`) 👍 Now the server should work with the `config.pl`  using `mixed_durations_cost`!
 
 ## Modeling 🖊️
 
