@@ -124,7 +124,7 @@ Check [this question](#can-i-know-what-other-students-though-about-idm-and-the-t
 
 ## Communication policy: I have a question, can I email you?
 
-**Communication/email policy:** Except for personal issues, all electronic communication must be directed to the [EdStem Discussion Forum](https://edstem.org/au/courses/29085/discussion). I only use email for limited communications regarding **personal circumstances** (in which case email is just used to arrange a face-to-face meeting). In particular, I will not respond by e-mail to any requests to clarify lecture, tutorial, or assignment questions. Please use workshops first, and discussion forum second, for all such questions so that a _fair course is run_ and all other fellow students can benefit as well. 
+**Communication/email policy:** Except for personal issues, all electronic communication must be directed to the [EdStem Discussion Forum][EDSTEM]. I only use email for limited communications regarding **personal circumstances** (in which case email is just used to arrange a face-to-face meeting). In particular, I will not respond by e-mail to any requests to clarify lecture, tutorial, assessment, or administration questions. Please use workshops first, and discussion forum second, for all such questions so that a _fair course is run_ and all other fellow students can benefit as well: **_sharing is caring_**. 
 
 For this course, the forum will be mostly restricted to **announcements** and **clarifications**; teaching will not provide extensive technical support in the forum (as we do with other courses like Math or AI); as this is a in-person Master-level AQF9 course with 3hrs of interactive workshop. Only reasonable questions that couldn't be addressed in the workshop will be answered by the teaching staff. While  we encourage students to participate and contribute among themselves, they should not assume the forum would serve as a full or partial replacement of in-person workshops.
 
@@ -260,14 +260,16 @@ Basically this is one sub-topic of the AI course expanded into a whole course. T
 
 ## What is the Forum FAQ & Forum Etiquette?
 
-It is a set of questions and guidelines how to use and behave in the forum professionally. Please see dedicated [Forum FAQ & Etiquette][FORUM-FAQ].
+It is a set of questions and guidelines how to use and behave in the forum professionally. Please see dedicated [Forum FAQ & Etiquette][FORUM-ETIQUETTE].
 
 ## Why do you use many platforms (EdStem, Canvas, GitHub, email, GH Classroom, Google, etc.) instead of just Canvas as other courses?
 
 This is a valid question that some student have, as they see themselves learning a few new platforms for the course.
 
 >[!IMPORTANT]
-> For many years I had to explain to some students (the wide majority understood right away), why I was using EdStem rather than Canvas. Not anymore. As of 2026, the School of Computing Technologies adopted EdStem formally, recognising its superiority over Canvas. As many other courses keep switching to EdStem, it became obvious. So, I am not anymore an outlier... 👏
+> For many years I had to explain to some students (the wide majority understood right away), _why_ I was using EdStem rather than Canvas. Not anymore... As of 2026, the School of Computing Technologies (SCT) has adopted EdStem formally, recognising its superiority over Canvas. As many other courses keep switching to EdStem, it became quite obvious. So, I am not anymore an outlier... 👏
+>
+> So, the text below is not needed anymore, but I will keep it here for historical reasons or in case you are interested. 😄
 
 First, be assured that the use of several platforms and tools is not random: _there is a rationale with significant thought, experience, and work behind_.
 
@@ -356,9 +358,6 @@ By default, EdStem emails you when there are new topics and posts. This can get 
 - Click “Edit Email notifications”
 - “Smart Digest” is a good choice for most people.
 - It is wise to leave the “For updates to Questions or Notes you follow” to “Real Time” unless you check EdStem more frequently than you check your email.
-- Answer borrowed from here
--  
-
 
 # WORKSHOP
 
@@ -446,7 +445,7 @@ Please note that late submissions are only allowed to assignments and projects, 
 
 The dates of all assessments in this course are given well in advance. Plan early your work around your commitments and workload, start on the assessments early, and submit them substantially before the deadline, preferably at least one or two days before. Submitting close to the deadline could be risky and you may fail to submit on time, for example due to loss of Internet, laptop problems, server delays, heavy workload, late enrolment, external commitments, etc
 
-However, if you know you will be unable to complete an assignment due to illness or personal circumstances outside of your control, please contact your lecturer immediately for special consideration. Evidence will be required. In many cases, though, I cannot grant unilateral special considerations and you may need to go through RMIT formal process for [Special Consideration (SPC)][SPC].
+However, if you know you will be unable to complete an assignment due to illness or personal circumstances outside of your control, please contact your lecturer immediately for special consideration. Evidence will be required. In many cases, though, I cannot grant unilateral special considerations and you may need to go through RMIT formal process for [Special Consideration (SPC)][RMIT-SPC].
 
 Each request will be considered on an individual basis. If the request is approved, the deadline for the assignment will be extended. If the request is denied and the assessment missed, you will unfortunately receive a 0 for that assessment.
 
@@ -592,11 +591,10 @@ As a university student and future graduate, understanding how higher education 
 
 **Be curious. Form your own informed opinion. Enjoy the journey.** 🎆
 
-
-[FORUM-FAQ]: https://docs.google.com/document/d/1HdrY91LIPRZOEni_jsCwmN8Oc8MrUzljen6qHzbtQeU/edit?usp=sharing
+[EDSTEM]: https://edstem.org/au/courses/29085/discussion
+[FORUM-ETIQUETTE]: https://docs.google.com/document/d/1HdrY91LIPRZOEni_jsCwmN8Oc8MrUzljen6qHzbtQeU/edit?usp=sharing
 [RMIT-SPC]: http://www.rmit.edu.au/students/specialconsideration
 [RMIT-CALENDAR]: https://www.rmit.edu.au/students/my-course/important-dates
 [AA]: https://handbook.rmit.edu.au/ords/r/rmit/catalogue/course?p6_code=004302&clear=6
 [COM_POLICY]: https://edstem.org/au/courses/29085/lessons/102733/slides/706362
 [COURSE_OVERVIEW]: https://handbook.rmit.edu.au/ords/r/rmit/catalogue/class?p8_code=053578&p8_class_guide_course_of_code=COSC2780&p8_class_guide_class_nbr=1457&p8_class_guide_term_descr=Semester%201
-[SPC]: http://www.rmit.edu.au/students/specialconsideration
