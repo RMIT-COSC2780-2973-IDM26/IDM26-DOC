@@ -1,4 +1,4 @@
-# Marking Guide for Flkight Network Reasoner Project - IDM'26
+# Marking Guide for Flight Network Reasoner Project - IDM'26
 
 This document explains the automarking framework and system used for the Flight Network Reasoner assignment project.
 
@@ -9,7 +9,7 @@ In order to understand the output from the automarker, there are two distinct co
 
 The automarker will produce a YAML file describing the outcome of each single test in each test set. See below for an example of a part of such YAML file.
 
-- [Marking Guide for Flkight Network Reasoner Project - IDM'26](#marking-guide-for-flkight-network-reasoner-project---idm26)
+- [Marking Guide for Flight Network Reasoner Project - IDM'26](#marking-guide-for-flight-network-reasoner-project---idm26)
   - [Consult error-free](#consult-error-free)
   - [Test suites cases](#test-suites-cases)
   - [Grading dimensions](#grading-dimensions)
